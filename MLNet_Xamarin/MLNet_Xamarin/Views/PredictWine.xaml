@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MLNet_Xamarin.Views.PredictWine">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+                <Label Text="Wine Type:"></Label>
+                <Picker SelectedIndex="0" SelectedItem="{Binding WineType}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Red</x:String>
+                            <x:String>White</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Fixed Acidity"></Label>
+                <Entry Text="{Binding FixedAcidity}"></Entry>
+
+                <Label Text="Volatile Acidity"></Label>
+                <Entry Text="{Binding VolatileAcidity}"></Entry>
+
+                <Label Text="Citric Acid"></Label>
+                <Entry Text="{Binding CitricAcid}"></Entry>
+
+                <Label Text="Residual Sugar"></Label>
+                <Entry Text="{Binding ResidualSugar}"></Entry>
+
+                <Label Text="Chlorides"></Label>
+                <Entry Text="{Binding Chlorides}"></Entry>
+
+                <Label Text="Free Sulfer Dioxide"></Label>
+                <Entry Text="{Binding FreeSulferDioxide}"></Entry>
+
+                <Label Text="Total Sulfer Dioxide"></Label>
+                <Entry Text="{Binding TotalSulferDioxide}"></Entry>
+
+                <Label Text="Density"></Label>
+                <Entry Text="{Binding Density}"></Entry>
+
+                <Label Text="Ph"></Label>
+                <Entry Text="{Binding Ph}"></Entry>
+
+                <Label Text="Sulphates"></Label>
+                <Entry Text="{Binding Sulphates}"></Entry>
+
+                <Label Text="Alcohol"></Label>
+                <Entry Text="{Binding Alcohol}"></Entry>
+                
+                <Button Text="Predict" Command="{Binding PredictCommand}"></Button>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
